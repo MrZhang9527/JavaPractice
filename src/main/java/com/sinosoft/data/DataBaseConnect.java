@@ -2,7 +2,9 @@ package com.sinosoft.data;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import zhang.test.controller.ReadConfig;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,9 +18,22 @@ public class DataBaseConnect {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DataBaseConnect.class);
 
-    private static final String URL = "jdbc:oracle:thin:@//10.136.100.25:1521/tkpsmdev";
-    private static final String USERNAME = "fcsm";
-    private static final String PASSWORD = "fcsm";
+    private static String url;
+    private static String username ;
+    private static String password ;
+
+    static {
+        try {
+            url = ReadConfig.readProperties("db.url");
+            username = ReadConfig.readProperties("db.username");
+            password = ReadConfig.readProperties("db.password");
+        } catch (IOException e) {
+            url = "";
+            username = "";
+            password = "";
+            e.printStackTrace();
+        }
+    }
 
     private DataBaseConnect() {
         throw new IllegalStateException("Utility class");
@@ -35,9 +50,9 @@ public class DataBaseConnect {
         {
             LOGGER.info("start to try connect database...");
             // 获取连接
-            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            LOGGER.info(URL);
-            String infoString = "user name: " + USERNAME + "\t" + " password:******";
+            connection = DriverManager.getConnection(url, username, password);
+            LOGGER.info(url);
+            String infoString = "user name: " + username + "\t" + " password:******";
             LOGGER.info(infoString);
             LOGGER.info("database connect success!");
             return connection;
