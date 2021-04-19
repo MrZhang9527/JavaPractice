@@ -2,8 +2,6 @@
 
 > 本文转载于 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
 >
-> 博客：https://www.algomooc.com
->
 > 侵删
 >
 
