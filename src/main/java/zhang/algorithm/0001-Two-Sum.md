@@ -1,8 +1,8 @@
 # LeetCode 第 1 号问题：两数之和
 
-> 本文首发于公众号「图解面试算法」，是 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
+> 本文转载于 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
 >
-> 同步博客：https://www.algomooc.com
+> 侵删
 >
 
 题目来源于 LeetCode 上第 1 号问题：两数之和。题目难度为 Easy，目前通过率为 45.8% 。
