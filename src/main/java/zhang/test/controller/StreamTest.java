@@ -1,5 +1,6 @@
 package zhang.test.controller;
 
+import java.security.Key;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,8 +15,17 @@ import java.util.stream.Stream;
  */
 public class StreamTest extends BaseTest{
     public static void main(String[] args) {
-        StreamTest streamTest = new StreamTest();
-        streamTest.streamDeal();
+        // StreamTest streamTest = new StreamTest();
+        // streamTest.streamDeal();
+
+        ArrayList<Integer> list = new ArrayList<>(5);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        int sum = list.stream().mapToInt(key -> key+1).sum();
+        System.out.println(sum);
     }
 
     
