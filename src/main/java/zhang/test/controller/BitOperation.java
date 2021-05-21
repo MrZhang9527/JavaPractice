@@ -8,6 +8,11 @@ package zhang.test.controller;
 public class BitOperation {
     public static void main(String[] args) {
         int a = 1;
+        try {
+            System.out.println(Integer.parseInt("123123"));
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        }
         System.out.println(Integer.toBinaryString(a));
         System.out.println(Integer.toBinaryString(-a));
         System.out.println(Integer.MIN_VALUE);
