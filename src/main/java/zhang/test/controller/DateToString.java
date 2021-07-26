@@ -2,6 +2,7 @@ package zhang.test.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -17,6 +18,7 @@ public class DateToString extends BaseTest{
         //等价于now.toLocaleString()
         SimpleDateFormat myFmt2=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         SimpleDateFormat myFmt3=new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 E ");
+        SimpleDateFormat myFmt5=new SimpleDateFormat("yyyyMM");
         SimpleDateFormat myFmt4=new SimpleDateFormat(
                 "一年中的第 D 天 一年中第w个星期 一月中第W个星期 在一天中k时 z时区");
         Date now=new Date();
@@ -28,13 +30,18 @@ public class DateToString extends BaseTest{
         System.out.println(now.toGMTString());
         System.out.println(now.toLocaleString());
         System.out.println(now.toString());
-        System.out.println(myFmt3.format(""));
 
         try {
             System.out.println(myFmt.parse("2020年1月1日 0时0分0秒"));
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.MONTH,-1);
+        System.out.println(myFmt5.format(calendar.getTime()));
+        calendar.add(Calendar.DATE,-25);
+        System.out.println(myFmt.format(calendar.getTime()));
     }
 
 

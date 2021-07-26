@@ -23,6 +23,9 @@ public class StringTest {
         // getLength(strA);
         // getLength("");
         // getLength(strB);
+        String key = "ORA-03150";
+        String content = "-3150,ORA-03150:";
+        LOGGER.info(String.valueOf(content.contains(key)));
     }
     public static void print(String text) {
         // Java 8
