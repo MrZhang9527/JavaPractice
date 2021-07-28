@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
 
+import java.math.BigDecimal;
 import java.util.Optional;
 
 /**
@@ -16,6 +17,9 @@ public class StringTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(StringTest.class);
     private static final Marker MARKER = MarkerFactory.getMarker(StringTest.class.toString());
     public static void main(String[] args) {
+        BigDecimal bigDecimal = BigDecimal.ONE;
+        System.out.println(bigDecimal.toString());
+        System.out.println(String.valueOf(bigDecimal));
         String strA = " abcd ", strB = null;
         print(strA);
         print("");
