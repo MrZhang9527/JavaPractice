@@ -17,7 +17,9 @@ public class StringTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(StringTest.class);
     private static final Marker MARKER = MarkerFactory.getMarker(StringTest.class.toString());
     public static void main(String[] args) {
-        BigDecimal bigDecimal = BigDecimal.ONE;
+        LOGGER.info(String.valueOf(null));
+
+        BigDecimal bigDecimal = BigDecimal.ZERO;
         System.out.println(bigDecimal.toString());
         System.out.println(String.valueOf(bigDecimal));
         String strA = " abcd ", strB = null;

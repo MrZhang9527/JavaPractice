@@ -1,6 +1,8 @@
 package zhang.test.controller;
 
-import java.security.Key;
+import org.apache.pdfbox.text.PDFTextStripper;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,10 +16,10 @@ import java.util.stream.Stream;
  * @date: 2021/2/23 10:43
  */
 public class StreamTest extends BaseTest{
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // StreamTest streamTest = new StreamTest();
         // streamTest.streamDeal();
-
+        new PDFTextStripper();
         ArrayList<Integer> list = new ArrayList<>(5);
         list.add(1);
         list.add(2);

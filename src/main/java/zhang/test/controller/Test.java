@@ -1,9 +1,11 @@
 package zhang.test.controller;
 
 
+import java.math.BigDecimal;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -56,6 +58,10 @@ public class Test {
     public static void main(String[] args) {
         CheckSum(51.98, 2);
         CheckSum(107.96, 4);
+
+        BigDecimal bigDecimal = new BigDecimal(0);
+        bigDecimal.add(BigDecimal.TEN);
+        log.info(bigDecimal.add(BigDecimal.TEN).toString());
 
     }
 
