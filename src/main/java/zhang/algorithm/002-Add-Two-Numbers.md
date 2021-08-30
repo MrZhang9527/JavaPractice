@@ -1,4 +1,4 @@
-# LeetCode 第 2 号问题：两数相加
+# LeetCode 第 2 号问题：两数相加 
 
 > 本文转载于 [图解 LeetCode ](<https://github.com/MisterBooo/LeetCodeAnimation>) 系列文章之一。
 >
