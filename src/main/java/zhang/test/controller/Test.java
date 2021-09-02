@@ -2,6 +2,7 @@ package zhang.test.controller;
 
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
@@ -56,12 +57,9 @@ public class Test {
      * @param args 参数列表
      */
     public static void main(String[] args) {
-        CheckSum(51.98, 2);
-        CheckSum(107.96, 4);
-
+        DecimalFormat decimalFormat = new DecimalFormat("#0.00");
         BigDecimal bigDecimal = new BigDecimal(0);
-        bigDecimal.add(BigDecimal.TEN);
-        log.info(bigDecimal.add(BigDecimal.TEN).toString());
+        log.info(decimalFormat.format(bigDecimal));
 
     }
 
