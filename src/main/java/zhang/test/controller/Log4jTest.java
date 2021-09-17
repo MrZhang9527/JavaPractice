@@ -21,7 +21,7 @@ public class Log4jTest {
     private static final Marker MARKER = MarkerFactory.getMarker(Log4jTest.class.toString());
 
     public static void main(String[] args) {
-        mapTest();
+        logTests("1");
     }
 
     public static void logTests(String msg){
@@ -31,6 +31,7 @@ public class Log4jTest {
         LOGGER.info(MARKER, "{} {}", msg, "11");
         LOGGER.warn(msg);
         LOGGER.error(msg);
+        LOGGER.info(null);
     }
 
     public static void addSelf(){

@@ -1,5 +1,6 @@
 package zhang.test.controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
@@ -16,7 +17,21 @@ import java.util.Optional;
 public class StringTest {
     private static final Logger LOGGER = LoggerFactory.getLogger(StringTest.class);
     private static final Marker MARKER = MarkerFactory.getMarker(StringTest.class.toString());
+
+    public static final String prefix;
+
+    static {
+        prefix = "/app";
+    }
+
     public static void main(String[] args) {
+        String app ;
+
+        System.out.println(",");
+
+        System.out.println(StringUtils.substringAfter("/app/cost/test/set",prefix));
+
+
         LOGGER.info(String.valueOf(null));
 
         BigDecimal bigDecimal = BigDecimal.ZERO;

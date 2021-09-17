@@ -6,7 +6,6 @@ import java.text.DecimalFormat;
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
@@ -58,9 +57,13 @@ public class Test {
      */
     public static void main(String[] args) {
         DecimalFormat decimalFormat = new DecimalFormat("#0.00");
-        BigDecimal bigDecimal = new BigDecimal(0);
+        BigDecimal bigDecimal = new BigDecimal(0).setScale(2);
         log.info(decimalFormat.format(bigDecimal));
+        test(new BigDecimal(""));
 
+    }
+    public static void test(BigDecimal s){
+        s = s.setScale(2);
     }
 
     /**
