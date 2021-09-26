@@ -1,10 +1,13 @@
 package zhang.test.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Marker;
 import org.slf4j.MarkerFactory;
+import zhang.test.entity.ApiResultVo;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -25,9 +28,31 @@ public class StringTest {
     }
 
     public static void main(String[] args) {
-        String app ;
+        String text = "{ \"resp_code\": 210,\n" +
+                "  " +
+                "\"resp_desc\": \"success\",\n" +
+                "  \"data\": {\n" +
+                "    \"inActuGetNo\": 20000000000,\n" +
+                "    \"outActuGetNo\": 20000000000\n" +
+                "  }\n" +
+                "}";
+        JSONObject jsonObject = JSON.parseObject(text);
 
-        System.out.println(",");
+        // System.out.println(jsonObject.getJSONObject("data").getString("inActuGetNo"));
+        // System.out.println(jsonObject.getJSONObject("data").getString("outActuGetNo"));
+        // System.out.println(jsonObject.getJSONObject("data").getString("outActuGetNo1"));
+        // System.out.println(jsonObject.getJSONObject("data1").getString("outActuGetNo"));
+
+
+        ApiResultVo resultVo = JSON.toJavaObject(jsonObject, ApiResultVo.class);
+        System.out.println(resultVo.getRespCode());
+        System.out.println(resultVo.getRespDesc());
+        // System.out.println(resultVo.getData()==null);
+        // System.out.println(resultVo.getData().getInActuGetNo());
+        // System.out.println(resultVo.getData().getOutActuGetNo());
+        System.out.println(resultVo.getInActuGetNo());
+        System.out.println(resultVo.getOutActuGetNo());
+        System.out.println(resultVo.isSuccess());
 
         System.out.println(StringUtils.substringAfter("/app/cost/test/set",prefix));
 
