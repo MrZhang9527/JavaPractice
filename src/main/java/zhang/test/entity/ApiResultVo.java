@@ -15,15 +15,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ApiResultVo {
 
-    private static final String SUCCESS = "200";
+    private static final String SUCCESS = "0";
 
     @JSONField(name = "resp_code")
     private String respCode;
     @JSONField(name = "resp_desc")
     private String respDesc;
-    // private DataVo data;
-    private String inActuGetNo;
-    private String outActuGetNo;
+    private DataVo data;
+    // private String inActuGetNo;
+    // private String outActuGetNo;
 
     public boolean isSuccess(){
         return SUCCESS.equals(this.respCode);

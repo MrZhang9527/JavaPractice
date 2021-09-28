@@ -28,7 +28,7 @@ public class StringTest {
     }
 
     public static void main(String[] args) {
-        String text = "{ \"resp_code\": 210,\n" +
+        String text = "{ \"resp_code\": 0,\n" +
                 "  " +
                 "\"resp_desc\": \"success\",\n" +
                 "  \"data\": {\n" +
@@ -47,11 +47,9 @@ public class StringTest {
         ApiResultVo resultVo = JSON.toJavaObject(jsonObject, ApiResultVo.class);
         System.out.println(resultVo.getRespCode());
         System.out.println(resultVo.getRespDesc());
-        // System.out.println(resultVo.getData()==null);
-        // System.out.println(resultVo.getData().getInActuGetNo());
-        // System.out.println(resultVo.getData().getOutActuGetNo());
-        System.out.println(resultVo.getInActuGetNo());
-        System.out.println(resultVo.getOutActuGetNo());
+        System.out.println(resultVo.getData()==null);
+        System.out.println(resultVo.getData().getInActuGetNo());
+        System.out.println(resultVo.getData().getOutActuGetNo());
         System.out.println(resultVo.isSuccess());
 
         System.out.println(StringUtils.substringAfter("/app/cost/test/set",prefix));
