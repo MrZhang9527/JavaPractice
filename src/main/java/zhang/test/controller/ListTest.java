@@ -15,6 +15,17 @@ import java.util.*;
  */
 public class ListTest extends BaseTest{
     public static void main(String[] args) {
+        HashSet<String> hashSet = new HashSet(){{
+            add("1");
+            add("2");
+            add("3");
+            add("4");
+            add("4");
+        }};
+        System.out.println(hashSet);
+
+
+
         // List<DicVo> list = new ArrayList<>();
         // DicVo template1 = new DicVo();
         // template1.setValue("123456781234");
