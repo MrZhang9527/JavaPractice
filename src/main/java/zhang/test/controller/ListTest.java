@@ -1,4 +1,5 @@
 package zhang.test.controller;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import com.google.common.base.Preconditions;
@@ -20,9 +21,28 @@ public class ListTest extends BaseTest{
             add("2");
             add("3");
             add("4");
-            add("4");
+            add("5");
         }};
         System.out.println(hashSet);
+        HashSet<String> hashSet1 = new HashSet(){{
+            add("11");
+            add("12");
+            add("13");
+            add("14");
+            add("14");
+        }};
+        System.out.println(hashSet1);
+        hashSet.addAll(hashSet1);
+        System.out.println(hashSet);
+        for (String s : hashSet) {
+            System.out.println(s);
+        }
+
+        try {
+            throw new IOException("111");
+        }catch (IOException e){
+            System.out.println(e.toString());
+        }
 
 
 
