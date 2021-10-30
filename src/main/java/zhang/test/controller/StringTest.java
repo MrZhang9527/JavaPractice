@@ -28,6 +28,21 @@ public class StringTest {
     }
 
     public static void main(String[] args) {
+        JSONObject jsonObject1 = JSON.parseObject("{\n" +
+                "  \"data\": {\n" +
+                "    \"inActuGetNo\": \"0\",\n" +
+                "    \"outActuGetNo\": \"0\"\n" +
+                "  }\n" +
+                "}");
+        ApiResultVo resultVo1 = JSON.toJavaObject(jsonObject1, ApiResultVo.class);
+        LOGGER.info(JSON.toJSONString(resultVo1));
+        String txt = "10#1";
+        String[] split = txt.split("#");
+        String curyear = split[0];
+        String polyear = split[1];
+        System.out.println(curyear);
+        System.out.println(polyear);
+
         String text = "{ \"resp_code\": 0,\n" +
                 "  " +
                 "\"resp_desc\": \"success\",\n" +
@@ -45,8 +60,8 @@ public class StringTest {
 
 
         ApiResultVo resultVo = JSON.toJavaObject(jsonObject, ApiResultVo.class);
-        System.out.println(resultVo.getRespCode());
-        System.out.println(resultVo.getRespDesc());
+        System.out.println(resultVo.getResp_code());
+        System.out.println(resultVo.getResp_desc());
         System.out.println(resultVo.getData()==null);
         System.out.println(resultVo.getData().getInActuGetNo());
         System.out.println(resultVo.getData().getOutActuGetNo());

@@ -10088,3 +10088,7 @@
 2021-09-17 15:22:35 WARN  Log4jTest:32 ==> 1
 2021-09-17 15:22:35 ERROR Log4jTest:33 ==> 1
 2021-09-17 15:22:35 INFO  Log4jTest:34 ==> 
+2021-10-28 19:47:33 INFO  StringTest:33 ==> null
+2021-10-28 19:47:49 INFO  StringTest:33 ==> {"success":false}
+2021-10-28 19:50:28 INFO  StringTest:38 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
+2021-10-29 10:17:26 INFO  StringTest:38 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}

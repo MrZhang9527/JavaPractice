@@ -18,14 +18,14 @@ public class ApiResultVo {
     private static final String SUCCESS = "0";
 
     @JSONField(name = "resp_code")
-    private String respCode;
+    private String resp_code;
     @JSONField(name = "resp_desc")
-    private String respDesc;
+    private String resp_desc;
     private DataVo data;
     // private String inActuGetNo;
     // private String outActuGetNo;
 
     public boolean isSuccess(){
-        return SUCCESS.equals(this.respCode);
+        return SUCCESS.equals(this.resp_code);
     }
 }
