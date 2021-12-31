@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * @Descripthon: TODO
  * @author: MrZhang
@@ -24,6 +26,7 @@ public class ApiResultVo {
     private DataVo data;
     // private String inActuGetNo;
     // private String outActuGetNo;
+    private Date makedate;
 
     public boolean isSuccess(){
         return SUCCESS.equals(this.resp_code);

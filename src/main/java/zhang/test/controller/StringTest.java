@@ -10,6 +10,10 @@ import org.slf4j.MarkerFactory;
 import zhang.test.entity.ApiResultVo;
 
 import java.math.BigDecimal;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 /**
@@ -27,7 +31,20 @@ public class StringTest {
         prefix = "/app";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+        JSONObject jsonObject2 = JSON.parseObject("{\"makedate\": \"2021-11-3\"}");
+        ApiResultVo resultVo2 = JSON.toJavaObject(jsonObject2, ApiResultVo.class);
+        LOGGER.info(JSON.toJSONString(resultVo2));
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd:HH:mm:ss");
+        Date date = new Date();
+        String dateStr = dateFormat.format(date);
+
+
+
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd").parse(dateStr));
+        System.out.println(dateStr);
+        System.out.println(date);
+
         JSONObject jsonObject1 = JSON.parseObject("{\n" +
                 "  \"data\": {\n" +
                 "    \"inActuGetNo\": \"0\",\n" +

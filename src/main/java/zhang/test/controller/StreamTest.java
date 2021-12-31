@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -17,6 +18,16 @@ import java.util.stream.Stream;
  */
 public class StreamTest extends BaseTest{
     public static void main(String[] args) throws IOException {
+        List<String> list1 = new ArrayList<String>(2){{
+            add("1");
+            add("2");
+        }};
+
+        Optional<String> any = list1.stream().filter(s -> s.equals("3")).findAny();
+        List<Integer> collect = list1.stream().filter(s -> s.equals("1")).map(s -> Integer.valueOf(s)).collect(Collectors.toList());
+        System.out.println(any.isPresent());
+        System.out.println(collect);
+
         // StreamTest streamTest = new StreamTest();
         // streamTest.streamDeal();
         new PDFTextStripper();

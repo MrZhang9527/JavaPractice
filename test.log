@@ -10092,3 +10092,7 @@
 2021-10-28 19:47:49 INFO  StringTest:33 ==> {"success":false}
 2021-10-28 19:50:28 INFO  StringTest:38 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
 2021-10-29 10:17:26 INFO  StringTest:38 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
+2021-11-02 13:02:40 INFO  StringTest:47 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
+2021-11-02 13:03:10 INFO  StringTest:47 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
+2021-11-02 13:03:54 INFO  StringTest:50 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}
+2021-11-02 13:10:37 INFO  StringTest:52 ==> {"data":{"inActuGetNo":"0","outActuGetNo":"0"},"success":false}

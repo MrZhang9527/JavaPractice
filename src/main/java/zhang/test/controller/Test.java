@@ -56,6 +56,9 @@ public class Test {
      * @param args 参数列表
      */
     public static void main(String[] args) {
+        BigDecimal d1 = new BigDecimal("10");
+        BigDecimal divide = d1.divide(BigDecimal.ZERO);
+        System.out.println(divide);
         DecimalFormat decimalFormat = new DecimalFormat("#0.00");
         BigDecimal bigDecimal = new BigDecimal(0).setScale(2);
         log.info(decimalFormat.format(bigDecimal));
