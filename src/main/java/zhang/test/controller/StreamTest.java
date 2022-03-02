@@ -1,6 +1,7 @@
 package zhang.test.controller;
 
 import org.apache.pdfbox.text.PDFTextStripper;
+import zhang.test.entity.DataVo;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -18,6 +19,35 @@ import java.util.stream.Stream;
  */
 public class StreamTest extends BaseTest{
     public static void main(String[] args) throws IOException {
+
+
+        DataVo dataVo1 = new DataVo();
+        dataVo1.setInActuGetNo("1");
+        dataVo1.setOutActuGetNo("2");
+        DataVo dataVo2 = new DataVo();
+        dataVo2.setInActuGetNo("1");
+        dataVo2.setOutActuGetNo("4");
+        DataVo dataVo3 = new DataVo();
+        dataVo3.setInActuGetNo("1");
+        dataVo3.setOutActuGetNo("6");
+        ArrayList arrayList1 = new ArrayList(){{
+            add(dataVo1);
+            add(dataVo2);
+        }};
+        ArrayList arrayList2 = new ArrayList(){{
+            add(dataVo3);
+            add(dataVo2);
+        }};
+
+
+        for (int i = 0; i < arrayList1.size(); i++) {
+
+            System.out.println(arrayList2.contains(arrayList1.get(i)));
+        }
+
+
+
+
         List<String> list1 = new ArrayList<String>(2){{
             add("1");
             add("2");

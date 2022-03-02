@@ -12,7 +12,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DataVo {
+public class DataVo{
     private String inActuGetNo;
     private String outActuGetNo;
+
+    @Override
+    public boolean equals(Object o) {
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }
